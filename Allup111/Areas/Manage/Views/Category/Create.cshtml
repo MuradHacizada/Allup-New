@@ -48,6 +48,13 @@
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
     <script>
+        if ($("#IsMain").prop('checked')) {
+            $("#PhotoBox").removeClass("d-none")
+            $("#MainCatBox").addClass("d-none")
+        } else {
+            $("#PhotoBox").addClass("d-none")
+            $("#MainCatBox").removeClass("d-none")
+        }
         $(document).on("change", "#IsMain", function () {
             if ($("#IsMain").prop('checked')) {
                 $("#PhotoBox").removeClass("d-none")
